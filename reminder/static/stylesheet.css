@@ -1,0 +1,25 @@
+#submit{
+	background-color: #168f93;
+	color: white;
+}
+
+.img-circle{
+	max-height: 200px;
+	min-height: inherit;
+}
+
+.more_feature{
+     color: #168f93;
+}
+
+.weather{
+    color: grey;
+    padding : 10px;
+}
+
+@media(max-width:600px ){
+    .img-circle{
+		max-height: 50%;
+		min-height: inherit;
+	}
+}

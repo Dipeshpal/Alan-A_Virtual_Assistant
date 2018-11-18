@@ -1,0 +1,42 @@
+{% extends "home/header.html" %}
+{% load staticfiles %}
+
+{% block content %}
+  		<!---Start Weather Forecast--->
+		<div class="weather">
+			<br><br>
+			<p><b>Temp in {{ city }} : </b><span>{{ temp }}</span></p>
+            <a href="http://127.0.0.1:8000/weather_forecast/">Change your city</a><br><br>
+			<p><b>Reminder : </b><span>{{ reminder_result }}</span></p>
+		</div>
+		<!--- Weather Forecast--->
+
+		<!--- Search Box --->
+		<div class="container">
+           <center>
+                <div class="col-md">
+                    <!--Logo Of Mic-->
+                    <img src="{% static 'img/ALAN.gif' %}" class="img-circle" alt="Search" style="align-items: center">
+                    <br><br>
+					<!--Input Box-->
+                    <!--input id="user_input" type="text" class="form-control" name="search" style="width: 60%; margin-top:20px"-->
+					
+					<form method="post">
+						{% csrf_token %}
+						{{ form.post }}
+						<button id="submit" type="submit" class="btn btn-outline-primary" value="Go" style="margin-top: 10px" onkeypress="chat()">Go</button>
+					</form>
+					<a href="http://127.0.0.1:8000/search/">I can search on Web</a><br><br>
+                    <!--TOTO Output-->
+					<p><span>{{ text }}</span></p>
+					<ul id="menu">
+  							<li><a href="http://www.youtube.com"><img src="{% static 'img/youtube.png' %}" class="img-circle" style="align-items: center"></a></li>
+							<li><a href="G:\Game\index.html"><img src="{% static 'img/game.png' %}" class="img-circle" style="align-items: center"></a></li>
+                            <li><a href="http://127.0.0.1:8000/reminder/"><img src="{% static 'img/reminder.png' %}" class="img-circle" style="align-items: center"></a></li>
+							<li><a href="https://play.google.com/music/listen?u=0#/home"><img src="{% static 'img/music.png'  %}" class="img-circle" style="align-items: center"></a></li>
+							<li><h1 class="more_feature">More Features Coming Soon</h1></li>
+						</ul>
+                 </div>
+           </center>
+		</div>
+{% endblock %}

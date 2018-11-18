@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+        <title>ALAN Assistant</title>
+		 {% load staticfiles %}
+		<!--==== CSS ====-->
+		<!-- BootStrap -->
+		<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}" type="text/css"/>
+		
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="{% static 'stylesheet.css' %}" type="text/css"/>
+		
+		
+		<!--==== JS ====-->
+		<!-- RiveScript -->
+        <script src="https://unpkg.com/rivescript@latest/dist/rivescript.min.js"></script>
+		
+		<!-- Brain RiveScript CSS -->
+		<script href="{% static 'brain/brain.js' %}"></script>
+		
+		<!-- JQuery (BootStrap Plugin) -->
+		<script href="{% static 'jquery-min.js' %}"></script>		
+		
+		
+		
+		<!-- P5 Libraries -->
+		<link href="{% static 'libraries/p5.js' %}"/>
+		<link href="{% static 'libraries/p5.dom.js' %}"/>
+		<link href="{% static 'libraries/p5.sound.js' %}"/>
+		<link href="{% static 'libraries/p5.speech.js' %}"/>
+		<style>
+			ul#menu li {
+    			display:inline;
+			}
+		</style>
+		
+    </head>
+    
+	
+	
+    <body class="body">
+		   	<div>
+				{% block content %}
+				{% endblock %}
+			</div>
+	</body>
+	
+	
+</html>

@@ -1,0 +1,26 @@
+{% extends "search/header.html" %}
+{% load staticfiles %}
+
+{% block content %}
+		<!--- Search Box --->
+		<div class="container">
+           <center>
+                <div class="col-md">
+                    <!--Logo Of Mic-->
+                    <img src="{% static 'img/ALAN.gif' %}" class="img-circle" alt="Search" style="align-items: center">
+                    <br><br>
+					<!--Input Box-->
+                    <!--input id="user_input" type="text" class="form-control" name="search" style="width: 60%; margin-top:20px"-->
+					<p>This is search</p>
+					<form method="post">
+						{% csrf_token %}
+						{{ form.post }}
+						<button id="submit" type="submit" class="btn btn-outline-primary" value="Go" style="margin-top: 10px" onkeypress="chat()">Go</button>
+					</form>
+					<a href="http://127.0.0.1:8000/home/">Chat With Me</a><br><br>
+                    <!--TOTO Output-->
+					<p><span>{{ text }}</span></p>
+				</div>
+           </center>
+		</div>
+{% endblock %}

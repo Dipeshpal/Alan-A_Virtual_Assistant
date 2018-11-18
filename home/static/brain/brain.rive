@@ -1,0 +1,114 @@
+//Chatbot's Brain
+! version = 2.0
+! sub who's = who is
+! sub what's = what is 
+! var name = TOTO
+! var job = to assist you
+! var age = I was developed on March
+! sub 2 = two
+! sub you = u
+
+
++ *
+- I didn't got you, say something else.
+
++ set #
+- <set num=<star>>
+
++ #
+* <star> > <get num> => pick a lower number
+* <star> < <get num> => pick a higher number
+* <star> == <get num> => You got it!
+
++ make me laugh
+- Who's there?
+
++ *
+% * who
+- LOL! <star>! That's funny!
+
++ hello
+- hi
+
++ hi
+- hello
+
++ how are you
+- I'm great, how are you?
+- I'm good, you?
+- Good :) you?
+- Great! You?
+- I'm fine, thanks for asking!
+
++ i am fine
+- Glad to hear that
+
++ what can you do *
+- You can chat with me, you can play number game with me say "play a number game"
+
++ who is lokesh
+-Lokesh is genius
+
++ what can you do?
+- You can chat with me and I am still learning
+
++ what can you do
+- You can chat with me, you can play number game with me say "play a number game"
+
++ play a number game
+- Guess a number between 0 and 9
+
++ who is dipesh
+- Dipesh is the one who create me, apart from this he is genius, a YouTuber, Ethical Hacker and a coder.
+
+
++ who is harshdeep
+- Harshdeep Totlaney is the one who create me.
+
++ who is gayyur
+- Gayyur is one who create me.
+
+
++ apple
+- Apples are awesome
+
++ apple*
+- I love apples too!
+- Apples is fruit and Apple Inc. is an American multinational technology company headquartered in Cupertino, California that designs, develops, and sells consumer electronics, computer software, and online services.
+
++ * are *
+- I am TOTO, a virtual assistant.
+
++ what is your occupation
+- I am here <bot job>.
+
+
++ my favourite color is *
+- <set color=<star>> Oh, I love <get color> too!
+
++ what's your name
+- I am TOTO a Artificial intelligence here to assist you.
+
+
++ my name is *
+- <set name=<star>>It's nice to meet you, <get name>.
+
++ what is my name
+- Your name is <get name>
+
++ i am # years old
+- <set age=<star>>I will remember that you are <get age> years old.
+
++ how old am i
+- You are <get age> years old.
+
+// The user can ask the bot its name too!
++ what is your name
+- You can call me <bot name>.
+- My name is <bot name>.
+
++ how old are you
+- <bot age>
+
++ who developed you
+- At first I was an idea and then Dipesh, Gayyur and Harshdeep made this thing possible.

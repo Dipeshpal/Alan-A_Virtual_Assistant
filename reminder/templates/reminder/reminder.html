@@ -1,0 +1,23 @@
+{% extends "reminder/header.html" %}
+{% load staticfiles %}
+
+{% block content %}
+		<!--- Search Box --->
+		<div class="container">
+           <center>
+                <div class="col-md">
+					<br><br><br><br>
+					<p style="color : grey">You can set your reminder here</p>
+                   	<form method="post">
+						{% csrf_token %}
+						{{ form.date }}
+						{{ form.time }}
+						{{ form.message }}
+						<button id="submit" type="submit" class="btn btn-outline-primary" value="Go" style="margin-top: 10px">Set</button>
+					</form>
+					<p><span>{{ successful }}</span></p>
+					<a href="http://127.0.0.1:8000/home/">Go to Home</a><br><br>
+                   </div>
+           </center>
+		</div>
+{% endblock %}
